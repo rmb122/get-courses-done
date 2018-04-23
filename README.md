@@ -14,6 +14,7 @@ st = sheet(["1.xls", "2.xls"])
 ```
 这个 list 中的表格名字替换掉之后就可以运行啦.   
 
-PS: 导出 cookie 我用的是 chrome 下的 [EditThisCookie][1] 插件.
+PS: 导出 cookie 我用的是 chrome 下的 [EditThisCookie][1] 插件.  
+PSS: 最后别忘了提交作业, 我只做了做题的部分, 不会自动提交作业.
 
 [1]: https://chrome.google.com/webstore/detail/fngmhnnpilhplaeedifhccceomclgfbg

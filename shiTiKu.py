@@ -38,7 +38,7 @@ def loadCookie():
         sess.cookies.set(cookie["name"], cookie["value"])
 
     sess.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36"
-
+    sess.headers["X-Requested-With"] = "XMLHttpRequest"
 
 def getCourses():
     res = sess.get("http://tkkc.hfut.edu.cn/student/index.do")
@@ -78,7 +78,7 @@ def getTestLinks(tasksLinks):
 
 def answerTheQuestion(question, examReplyId, examId, teachingTaskId):
     global count
-    sess.headers["X-Requested-With"] = "XMLHttpRequest"
+
     postData = {
         "method": "getExerciseInfo",
         "examStudentExerciseId": question["examStudentExerciseId"],
@@ -114,7 +114,7 @@ def answerTheQuestion(question, examReplyId, examId, teachingTaskId):
             pass
 
     print(res.text, count, answer)
-    time.sleep(0.5)
+    time.sleep(0.5) # Don't abuse the poor server :)
     count += 1
 
 
